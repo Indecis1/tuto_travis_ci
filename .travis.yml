@@ -1,0 +1,24 @@
+language: java
+
+jdk:
+  - openjdk8
+before_install:
+  - chmod +x mvnw
+script:
+  - mvn clean verify
+deploy:
+  provider: heroku
+  api_key:
+    secure: JOcsYDet5GymSwdWbAmMgjgjqsIZV8jtlMYZsEaKDYQvtERMwUGwZKUsluga1nlLYonTTxIGzA1FvGpgtXqfcetRdOGCMJwuo2RW0bD/4nVluaCkT7e/Lbr94T1+TdPmylq1LgPQDVI3R3vfalyV0oyt519CjCAw8dGo5Ohy22tlxlAT9nfZnUuyet/ughl8QhC8J/On4k5mZypVgb3mb6zOGiJrBT/wALt5o7paLRCBKKZAxj47XPZ1sjwrUU/BxRwtUBqcKZQMhouOqB9kVBQa6F1G993KxtjwdIgukXJALfcpkDOpBO1mrdIYx4TleWb1cSIY/9Crb25Hf83+j68ItdSJ7A+afTKvw30kpG9LKTtTRXVqDoF2TZWI9R5M5gvXlinRgPJYsWv+9ZeQrepL3izVVCgSFPl7GJ5cn9Tea8tVD5aJv5cJ0SUZQA3cNq3HqdsEFYhVLrfFeEG6pqWKSm1VfQ97hi4WTlyheJgtXAqrwrnu5DKsu9P/oHAqK7/SlJbZGkRl5xbKiymTFvtrbE4Au/3DLflmxs5RZo744xSlXu+ZAFKF2AL7wPOllv7MziIUyQvlgk5zbb8BJnC8BJlVUDyV9tzzKLh13nqfWLnSW5+vQFv7GVh6fv71DreyLHWBkclTss2bkTe+7xxbsS+V8yTdlqiH1RHjxXs=
+  app: tuto-travis-ci
+  on:
+    repo: Indecis1/tuto_travis_ci
+    branch: main
+
+
+
+
+
+
+
+
